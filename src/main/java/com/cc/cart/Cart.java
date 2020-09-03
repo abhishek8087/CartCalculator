@@ -97,6 +97,10 @@ public class Cart {
                 getMultiplePromo(currProduct.getSKUId());
             }
 
+            if(cartProduct.getFinalPrice() == 0){
+                cartProduct.setFinalPrice(cartProduct.getQuantity()* currProduct.getPrice());
+            }
+
 
         }
     }
